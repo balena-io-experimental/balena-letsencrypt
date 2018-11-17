@@ -1,0 +1,9 @@
+[Unit]
+Description=certbot renew timer
+
+[Timer]
+OnCalendar=monthly
+Persistent=true
+
+[Install]
+WantedBy=cloudbox.target

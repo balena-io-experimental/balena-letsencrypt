@@ -1,0 +1,10 @@
+[Unit]
+Description=certbot renew
+
+[Service]
+SyslogIdentifier=certbot-renew
+ExecStart=/usr/bin/certbot renew --config-dir=/data --renew-hook="systemctl restart haproxy"
+Type=oneshot
+
+[Install]
+WantedBy=basic.target
